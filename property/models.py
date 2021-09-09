@@ -9,7 +9,7 @@ class Flat(models.Model):
     owner = models.CharField("ФИО владельца", max_length=200)
     owners_phonenumber = models.CharField("Номер владельца", max_length=20)
     owner_pure_phone = PhoneNumberField(
-        "Номер владельца (нормализованный)", blank=True, max_length=20
+        "Номер владельца (нормализованный)", blank=True, null=True, max_length=20
     )
     created_at = models.DateTimeField(
         "Когда создано объявление", default=timezone.now, db_index=True
