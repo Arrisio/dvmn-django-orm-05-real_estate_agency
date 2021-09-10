@@ -15,3 +15,4 @@ class FlatAdmin(admin.ModelAdmin):
 class ComplaintAdmin(admin.ModelAdmin):
     raw_id_fields =['complainant', 'flat']
     list_display = ['complainant', 'flat', 'text']
+
