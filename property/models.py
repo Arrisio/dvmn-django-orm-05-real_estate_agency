@@ -90,7 +90,7 @@ class Owner(models.Model):
         max_length=20,
     )
     flat = models.ManyToManyField(
-        Flat, related_name="owners", blank=True, default=[]
+        Flat, related_name="owned_by", blank=True, default=[]
     )
 
     def __str__(self):
