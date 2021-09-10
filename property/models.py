@@ -89,7 +89,9 @@ class Owner(models.Model):
         null=True,
         max_length=20,
     )
-    flat = models.ManyToManyField(Flat, related_name="owner_tmp", blank=True)
+    flat = models.ManyToManyField(
+        Flat, related_name="owner_tmp", blank=True, default=[]
+    )
 
     def __str__(self):
         return self.name
